@@ -21,8 +21,8 @@
       "images": [
         "/images/warren_back.jpg",
         "/images/warren_face.jpg",
-        "/images/warren_far.jpg",
-        "/images/warren_profil.jpg"
+        "/images/warren_profil.jpg",
+        "/images/warren_far.jpg"
       ],
       "thumbnail": "/images/warren_table.jpg",
       "createdAt": "2025-01-15T10:00:00Z",
@@ -49,8 +49,8 @@
       "images": [
         "/images/munger_back.jpg",
         "/images/munger_face.jpg",
-        "/images/munger_far.jpg",
-        "/images/munger_profil.jpg"
+        "/images/munger_profil.jpg",
+        "/images/munger_far.jpg"
       ],
       "thumbnail": "/images/munger_table.jpg",
       "createdAt": "2025-01-15T10:00:00Z",
@@ -74,7 +74,7 @@
         "base": "6x6 inches Blue Fantasy stone (1.25 inches thick)",
         "leadFree": true
       },
-      "images": "/images/both.jpg",
+      "images": ["/images/both.jpg"],
       "thumbnail": "/images/warren&buffet.png",
       "createdAt": "2025-01-15T10:00:00Z",
       "updatedAt": "2025-01-15T10:00:00Z"
