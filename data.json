@@ -1,0 +1,83 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Buffett",
+      "subtitle": "Warren Buffett, Chairman and CEO of Berkshire Hathaway.",
+      "name": "Warren Buffett Bronze Bust",
+      "slug": "warren-buffett-bronze-bust",
+      "price": 1299.0,
+      "currency": "USD",
+      "category": "bronze-bust",
+      "inStock": true,
+      "stock": 5,
+      "description": "Have you ever wanted to work side by side with Warren Buffett? This is your chance. This version is slightly quieter, but his silent presence will always remind you to channel your inner scorecard and be greedy when others are fearful. Cast in premium Everdur bronze, with a 96% copper alloy, this 15' lead-free bust sits atop a 6' by 6' base made of 1.25' thick Blue Fantasy stone, to give a fitting finish to such an icon.",
+      "specifications": {
+        "material": "Everdur bronze (96% copper alloy)",
+        "height": "15 inches",
+        "base": "6x6 inches Blue Fantasy stone (1.25 inches thick)",
+        "leadFree": true
+      },
+      "images": [
+        "/images/warren_back.jpg",
+        "/images/warren_face.jpg",
+        "/images/warren_far.jpg",
+        "/images/warren_profil.jpg"
+      ],
+      "thumbnail": "/images/warren_table.jpg",
+      "createdAt": "2025-01-15T10:00:00Z",
+      "updatedAt": "2025-01-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Munger",
+      "subtitle": "Charlie Munger, Vice Chairman of Berkshire Hathaway.",
+      "name": "Charlie Munger Bronze Bust",
+      "slug": "charlie-munger-bronze-bust",
+      "price": 1299.0,
+      "currency": "USD",
+      "category": "bronze-bust",
+      "inStock": true,
+      "stock": 3,
+      "description": "Charlie Munger, Vice Chairman of Berkshire Hathaway, like you've never seen him before. A perfect silent companion for your office, forever reminding you to 'invert, always invert'.",
+      "specifications": {
+        "material": "Everdur bronze (96% copper alloy)",
+        "height": "15 inches",
+        "base": "6x6 inches Blue Fantasy stone (1.25 inches thick)",
+        "leadFree": true
+      },
+      "images": [
+        "/images/munger_back.jpg",
+        "/images/munger_face.jpg",
+        "/images/munger_far.jpg",
+        "/images/munger_profil.jpg"
+      ],
+      "thumbnail": "/images/munger_table.jpg",
+      "createdAt": "2025-01-15T10:00:00Z",
+      "updatedAt": "2025-01-15T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Get Both",
+      "subtitle": "Charlie Munger and Warren Buffett, Both Vice Chairman of Berkshire Hathaway.",
+      "name": "Warren and Charlie Bronze Busts",
+      "slug": "warren-buffett-and-charlie-munger",
+      "price": 2399.0,
+      "currency": "USD",
+      "category": "bronze-bust",
+      "inStock": true,
+      "stock": 3,
+      "description": "Each bust is cast in premium Everdur bronze, with a 96% copper alloy, these 15' lead-free busts sit atop a 6' by 6' base made of 1.25' thick Blue Fantasy stone, to give a fitting finish to such an icon.",
+      "specifications": {
+        "material": "Everdur bronze (96% copper alloy)",
+        "height": "15 inches",
+        "base": "6x6 inches Blue Fantasy stone (1.25 inches thick)",
+        "leadFree": true
+      },
+      "images": "/images/both.jpg",
+      "thumbnail": "/images/warren&buffet.png",
+      "createdAt": "2025-01-15T10:00:00Z",
+      "updatedAt": "2025-01-15T10:00:00Z"
+    }
+  ]
+}
