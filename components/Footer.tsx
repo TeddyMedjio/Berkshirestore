@@ -9,7 +9,7 @@ export const Footer = () => {
       <BothProduct />
       <div>
         <Container>
-          <div className="flex items-center justify-between py-5">
+          <div className="flex flex-col md:flex-row items-center justify-between py-5 text-center md:text-left">
             <p className="text-black/50">
               © BerkshireNerds 2019 - A silly side project by{" "}
               <span>

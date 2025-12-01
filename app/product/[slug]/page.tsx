@@ -1,10 +1,10 @@
 "use client";
 
 import { Container } from "@/components/Container";
-import { Plus } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import Image from "next/image";
 import productsData from "@/data.json";
-import { notFound } from "next/navigation";
+import { notFound, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import {
   motion,
@@ -13,12 +13,14 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import { SheetDemo } from "@/components/Sheet";
 
 export default function ProductDetail({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  const router = useRouter();
   const [slug, setSlug] = useState<string>("");
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
   const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -40,6 +42,13 @@ export default function ProductDetail({
   if (!product) {
     notFound();
   }
+
+  // Fonction pour gérer le changement de la checkbox
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.checked) {
+      router.push("/product/warren-buffett-and-charlie-munger");
+    }
+  };
 
   // Fonction pour scroller vers une image spécifique
   const scrollToImage = (index: number) => {
@@ -145,9 +154,39 @@ export default function ProductDetail({
                   </motion.div>
                 ))}
             </div>
-            <button className="text-blue bg-[#F1F7FD] w-full p-4 uppercase font-bold hover:text-white hover:bg-blue ease-in-out duration-300 cursor-pointer relative">
-              Add to cart{" "}
-              <Plus size={14} className="absolute inset-0 m-auto left-60" />
+            <div>
+              <SheetDemo
+                productToAdd={{
+                  id: product.id,
+                  name: product.name,
+                  price: product.price,
+                  currency: product.currency,
+                  image: product.thumbnail,
+                  slug: product.slug,
+                }}
+              />
+            </div>
+            {product.slug !== "warren-buffett-and-charlie-munger" && (
+              <div className="flex items-center gap-4">
+                <input
+                  type="checkbox"
+                  name="reduction of 12%"
+                  id=""
+                  className="rounded-none"
+                  onChange={handleCheckboxChange}
+                />
+                <p className="uppercase text-[11px] font-bold">
+                  add{" "}
+                  {product.name.toLowerCase().includes("charlie")
+                    ? "warren"
+                    : "charlie"}{" "}
+                  for $1,00 (12% off)
+                </p>
+              </div>
+            )}
+            <button className="text-[11px] text-white bg-blue w-full p-4 uppercase font-bold hover:text-white hover:bg-blue ease-in-out duration-300 cursor-pointer flex items-center justify-between">
+              buy now
+              <ArrowRight size={12} className="" />
             </button>
           </div>
         </div>
