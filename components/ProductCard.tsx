@@ -8,6 +8,7 @@ interface infosProps {
   price: number;
   subtitle: string;
   slug: string;
+  className?: string;
 }
 
 export const ProductCard = ({
@@ -16,17 +17,18 @@ export const ProductCard = ({
   price,
   subtitle,
   slug,
+  className = "",
 }: infosProps) => {
   return (
-    <div className="relative h-[650px] flex-1 w-full">
+    <div className={`relative h-[650px] flex-1 w-full ${className}`}>
       <Image
         src={thumbnail}
         fill={true}
         alt={`${title} in bronze`}
         className="absolute inset-0 m-auto object-cover object-center -z-1"
       />
-      <div className="p-10 absolute inset-0 m-auto bottom-0 grid place-items-end">
-        <div className="w-full">
+      <div className="p-10 absolute inset-0 m-auto bottom-0 grid place-items-end z-10 pointer-events-none">
+        <div className="w-full relative pointer-events-auto">
           <p className="text-[26px] text-white font-forum font-semibold">
             {title}
           </p>
@@ -44,7 +46,7 @@ export const ProductCard = ({
             </p>
             <Link
               href={`/product/${slug}`}
-              className="bg-white p-5 text-[11px] uppercase font-bold text-blue flex items-center gap-1"
+              className="bg-white p-5 text-[11px] uppercase font-bold text-blue flex items-center gap-1 relative z-20"
             >
               Details
               <ArrowRight size={15} />

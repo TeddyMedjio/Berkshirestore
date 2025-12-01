@@ -1,9 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import { Container } from "./Container";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const Faq = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  // Animation progressive de la carte FAQs au scroll
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const faqCardY = useTransform(scrollYProgress, [0, 1], [200, -100]);
+
   return (
-    <section className=" bg-[#F4F0ED]">
+    <section ref={sectionRef} className=" bg-[#F4F0ED]">
       <Container>
         <div className="relative pt-40 pb-60 flex items-start gap-5 flex-wrap lg:flex-nowrap">
           <div className="flex-1/2 bg-white p-8 ">
@@ -14,7 +28,10 @@ export const Faq = () => {
               stone to give a fitting finish to such an icon.
             </p>
           </div>
-          <div className="flex-1/2 bg-white p-8 lg:mt-30">
+          <motion.div
+            style={{ y: faqCardY }}
+            className="flex-1/2 bg-white p-8 mt-30"
+          >
             <p className="font-forum text-[26px] mb-4">FAQs</p>
             <p>
               Cast in premium Everdur bronze, with a 96% copper alloy, these 15"
@@ -24,7 +41,7 @@ export const Faq = () => {
               sit atop a further 1" deep base of Blue Fantasy stone to give a
               fitting finish to such an icon.
             </p>
-          </div>
+          </motion.div>
           <Image
             src="/images/filligram_munger.png"
             height={240}
