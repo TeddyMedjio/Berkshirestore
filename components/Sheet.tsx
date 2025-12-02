@@ -15,6 +15,7 @@ import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 interface SheetDemoProps {
   productToAdd?: {
@@ -37,6 +38,7 @@ export function SheetDemo({
   const { items, addItem, removeItem, updateQuantity, totalItems, totalPrice } =
     useCart();
   const [isAdding, setIsAdding] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleAddToCart = () => {
     if (productToAdd && !isAdding) {
@@ -45,12 +47,13 @@ export function SheetDemo({
       setTimeout(() => {
         addItem(productToAdd);
         setIsAdding(false);
+        setOpen(true);
       }, 800);
     }
   };
 
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         {isNavbar ? (
           <button className="uppercase text-[10px] md:text-[11px] cursor-pointer">
@@ -142,16 +145,8 @@ export function SheetDemo({
                     <p className="text-[11px] uppercase font-semibold max-w-[180px]">
                       {item.name}
                     </p>
-                    {/* <p className="text-[11px] text-black/60 mt-1">
-                      ${item.price.toLocaleString("en-US", {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
-                      })}{" "}
-                      {item.currency}
-                    </p> */}
                   </div>
                   <div className="flex items-center gap-2">
-                    {/* <label className="text-[10px] text-black/50">Qty:</label> */}
                     <input
                       type="number"
                       min="0"
@@ -188,13 +183,14 @@ export function SheetDemo({
               Shipping & taxes calculated at checkout.
             </SheetDescription>
           </div>
-          <button
-            disabled={items.length === 0}
-            className="text-[11px] text-white bg-blue w-full p-4 uppercase font-bold hover:text-white hover:bg-blue/90 ease-in-out duration-300 cursor-pointer flex items-center justify-between disabled:opacity-50 disabled:cursor-not-allowed"
+          <Link
+            href="/checkout"
+            onClick={() => setOpen(false)}
+            className="text-[11px] text-white bg-blue w-full p-4 uppercase font-bold hover:text-white hover:bg-blue/90 ease-in-out duration-300 cursor-pointer flex items-center justify-between"
           >
             buy now
             <ArrowRight size={12} />
-          </button>
+          </Link>
         </SheetFooter>
       </SheetContent>
     </Sheet>

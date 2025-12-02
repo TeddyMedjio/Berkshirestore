@@ -10,8 +10,8 @@ export const Footer = () => {
       <div>
         <Container>
           <div className="flex flex-col md:flex-row items-center justify-between py-5 text-center md:text-left">
-            <p className="text-black/50 text-sm">
-              © BerkshireNerds 2019 - Deevelop by{" "}
+            <p className="text-black/50 text-">
+              © BerkshireNerds 2019 - Develop by{" "}
               <span>
                 <Link
                   href="https://www.medjio.me"

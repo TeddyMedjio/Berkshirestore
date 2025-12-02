@@ -66,7 +66,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative grid place-items-center mt-10 lg:mt-20 pb-60 md:pb-60 lg:pb-30">
+        <div className="relative grid place-items-center mt-10 lg:mt-20 pb-60">
           <p className="font-forum text-2xl text-center max-w-[550px] px-4">
             Hand-crafted in the USA, these busts are the perfect centerpiece for
             your office or gift for a fellow Berkshire groupie. <br /> <br />A

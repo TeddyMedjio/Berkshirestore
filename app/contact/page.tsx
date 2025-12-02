@@ -33,7 +33,7 @@ export default function ContactPage() {
               type="email"
               name="email"
               id="email"
-              className="bg-white p-2 pt-5 w-full outline-0 text-sm"
+              className="bg-white px-4 pb-2 pt-5 w-full outline-0 text-sm"
               required
             />
           </div>
@@ -48,7 +48,7 @@ export default function ContactPage() {
               type="text"
               name="name"
               id="name"
-              className="bg-white p-2 pt-5 w-full outline-0 text-sm"
+              className="bg-white px-4 pt-5 pb-2 w-full outline-0 text-sm"
               required
             />
           </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
               name="message"
               id="message"
               rows={5}
-              className="bg-white p-2 pt-5 w-full outline-0 resize-none text-sm"
+              className="bg-white px-4 pt-5 w-full outline-0 resize-none text-sm"
               required
             />
           </div>
