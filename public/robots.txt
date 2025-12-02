@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow checkout and cart pages from search engines
+Disallow: /checkout
+Disallow: /cart
+
+# Sitemap
+Sitemap: https://berkshirenerds.com/sitemap.xml

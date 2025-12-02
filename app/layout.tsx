@@ -16,8 +16,58 @@ const forum = Forum({
 });
 
 export const metadata: Metadata = {
-  title: "Berkshire - Premium Bronz Busts | Warren Buffett | Charlie Munger",
-  description: "Warren and Charlie in bronze at last",
+  metadataBase: new URL('https://berkshirenerds.com'),
+  title: {
+    default: "Premium Bronze Busts of Warren Buffett & Charlie Munger | Berkshire Nerds",
+    template: "%s | Berkshire Nerds"
+  },
+  description: "Hand-crafted premium bronze busts of Warren Buffett and Charlie Munger. Cast in 96% copper Everdur bronze with Blue Fantasy stone base. Perfect for your office or as a gift for fellow investors.",
+  keywords: ["Warren Buffett", "Charlie Munger", "bronze bust", "Berkshire Hathaway", "investment", "office decor", "premium sculpture", "bronze statue"],
+  authors: [{ name: "Berkshire Nerds" }],
+  creator: "Berkshire Nerds",
+  publisher: "Berkshire Nerds",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://berkshirenerds.com",
+    siteName: "Berkshire Nerds",
+    title: "Premium Bronze Busts of Warren Buffett & Charlie Munger",
+    description: "Hand-crafted premium bronze busts of Warren Buffett and Charlie Munger. Cast in 96% copper Everdur bronze.",
+    images: [
+      {
+        url: "/images/warren_table.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Warren Buffett Bronze Bust",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Premium Bronze Busts of Warren Buffett & Charlie Munger",
+    description: "Hand-crafted premium bronze busts of Warren Buffett and Charlie Munger.",
+    images: ["/images/warren_table.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    // google: 'your-google-verification-code',
+    // yandex: 'your-yandex-verification-code',
+  },
 };
 
 export default function RootLayout({

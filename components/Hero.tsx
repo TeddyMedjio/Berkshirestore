@@ -77,7 +77,7 @@ export default function Hero() {
             src="/images/filligram_warren.png"
             height={200}
             width={300}
-            alt=""
+            alt="Warren Buffett decorative filigree pattern"
             className="absolute bottom-0 right-0"
           />
         </div>

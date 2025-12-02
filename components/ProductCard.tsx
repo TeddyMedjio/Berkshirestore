@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-interface infosProps {
+interface ProductCardProps {
   thumbnail: string;
   title: string;
   price: number;
@@ -18,7 +18,7 @@ export const ProductCard = ({
   subtitle,
   slug,
   className = "",
-}: infosProps) => {
+}: ProductCardProps) => {
   return (
     <div className={`relative h-[500px] md:h-[650px] w-full ${className}`}>
       <Image

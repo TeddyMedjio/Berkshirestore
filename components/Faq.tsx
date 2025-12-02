@@ -21,7 +21,7 @@ export const Faq = () => {
       <Container>
         <div className="relative pt-10 md:pt-40 pb-72 md:pb-60 flex items-start gap-4 md:gap-5 flex-wrap md:flex-nowrap">
           <div className="w-full md:flex-1 bg-white p-6 md:p-8">
-            <p className="font-forum text-xl md:text-[26px] mb-4">Details</p>
+            <h2 className="font-forum text-xl md:text-[26px] mb-4">Details</h2>
             <p className="text-sm md:text-base">
               Cast in premium Everdur bronze, with a 96% copper alloy, these 15"
               lead-free busts sit atop a further 1" deep base of Blue Fantasy
@@ -32,7 +32,7 @@ export const Faq = () => {
             style={{ y: faqCardY }}
             className="w-full md:flex-1 bg-white p-6 md:p-8 md:mt-30"
           >
-            <p className="font-forum text-xl md:text-[26px] mb-4">FAQs</p>
+            <h2 className="font-forum text-xl md:text-[26px] mb-4">FAQs</h2>
             <p className="text-sm md:text-base">
               Cast in premium Everdur bronze, with a 96% copper alloy, these 15"
               lead-free busts sit atop a further 1" deep base of Blue Fantasy
@@ -46,7 +46,7 @@ export const Faq = () => {
             src="/images/filligram_munger.png"
             height={240}
             width={340}
-            alt=""
+            alt="Charlie Munger decorative filigree pattern"
             className="absolute bottom-0 left-0"
           />
         </div>

@@ -3,9 +3,14 @@ import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact - Berkshire Bronze Busts",
+  title: "Contact Us - Premium Bronze Busts",
   description:
-    "Get in touch with us. We usually respond within one business day.",
+    "Get in touch with Berkshire Nerds for inquiries about our premium Warren Buffett and Charlie Munger bronze busts. We respond within one business day.",
+  openGraph: {
+    title: "Contact Berkshire Nerds",
+    description: "Questions about our bronze busts? Contact us and we'll respond within one business day.",
+    url: "https://berkshirenerds.com/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -13,7 +18,7 @@ export default function ContactPage() {
     <section>
       <Container>
         <div className="text-center grid place-items-center my-20">
-          <p className="text-6xl font-forum text-blue font-semibold">Contact</p>
+          <h1 className="text-6xl font-forum text-blue font-semibold">Contact</h1>
           <p className="max-w-[400px]">
             Send us an email through the form. We usually respond within one
             business day.

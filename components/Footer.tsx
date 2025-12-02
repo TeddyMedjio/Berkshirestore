@@ -10,7 +10,7 @@ export const Footer = () => {
       <div>
         <Container>
           <div className="flex flex-col md:flex-row items-center justify-between py-5 text-center md:text-left">
-            <p className="text-black/50 text-">
+            <p className="text-black/50">
               © BerkshireNerds 2019 - Develop by{" "}
               <span>
                 <Link

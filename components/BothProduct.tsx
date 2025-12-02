@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function BothProduct() {
+export default function BothProduct() {
   const products = productsData.products;
 
   return (
@@ -13,7 +13,7 @@ export default async function BothProduct() {
           <Image
             src={product.thumbnail}
             fill={true}
-            alt="warren & buffet in bronz"
+            alt="Warren & Buffett in bronze"
             className="absolute inset-0 m-auto object-cover -z-1"
           />
           <div className="h-full flex items-center justify-center">
@@ -22,7 +22,7 @@ export default async function BothProduct() {
                 <p className="text-blue font-forum text-5xl font-semibold">
                   {product.title}
                 </p>
-                <p className="text-blsck/80 text-[11px] ">
+                <p className="text-black/80 text-[11px] ">
                   ${" "}
                   {product.price.toLocaleString("en-US", {
                     minimumFractionDigits: 2,

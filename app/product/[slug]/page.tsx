@@ -15,6 +15,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { SheetDemo } from "@/components/Sheet";
+import { ProductStructuredData, BreadcrumbStructuredData } from "@/components/StructuredData";
 
 export default function ProductDetail({
   params,
@@ -89,9 +90,25 @@ export default function ProductDetail({
   };
 
   return (
-    <section className="pt-24 md:pt-40 relative">
-      <div className="fixed bottom-0 w-full h-[40%] md:h-[52%] bg-[#F9F4F1] -z-1" />
-      <Container>
+    <>
+      <ProductStructuredData
+        name={product.name}
+        description={product.description}
+        image={product.thumbnail}
+        price={product.price}
+        currency={product.currency}
+        sku={product.slug}
+      />
+      <BreadcrumbStructuredData
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Products", url: "/" },
+          { name: product.name, url: `/product/${product.slug}` },
+        ]}
+      />
+      <section className="pt-24 md:pt-40 relative">
+        <div className="fixed bottom-0 w-full h-[40%] md:h-[52%] bg-[#F9F4F1] -z-1" />
+        <Container>
         <motion.h1
           style={{ opacity: titleOpacity }}
           className="absolute top-12 md:top-10 inset-0 m-auto font-forum text-center text-[50px] leading-13 sm:text-4xl md:text-[55px] lg:text-[70px] font-semibold text-blue w-[90%] sm:w-[80%] md:w-[400px] lg:w-[600px] px-4"
@@ -322,6 +339,7 @@ export default function ProductDetail({
         </div>
       </Container>
     </section>
+    </>
   );
 }
 

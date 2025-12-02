@@ -16,13 +16,13 @@ export const Navbar = () => {
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/logo.png"
-              height={1.75}
-              width={10}
-              alt="logo of warren buffet and charlie munger"
+              height={35}
+              width={150}
+              alt="logo of Warren Buffett and Charlie Munger"
             />
-            <p className="uppercase text-[10px] md:text-[11px]">
+            {/* <p className="uppercase text-[10px] md:text-[11px]">
               Berkshire Nerds
-            </p>
+            </p> */}
           </Link>
           <div className="flex items-center space-x-3 md:space-x-5">
             <Link
