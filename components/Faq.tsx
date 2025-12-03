@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Container } from "./Container";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { AccordionDemo } from "./Accordion";
 
 export const Faq = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -33,14 +34,7 @@ export const Faq = () => {
             className="w-full md:flex-1 bg-white p-6 md:p-8 md:mt-30"
           >
             <h2 className="font-forum text-xl md:text-[26px] mb-4">FAQs</h2>
-            <p className="text-sm md:text-base">
-              Cast in premium Everdur bronze, with a 96% copper alloy, these 15"
-              lead-free busts sit atop a further 1" deep base of Blue Fantasy
-              stone to give a fitting finish to such an icon. Cast in premium
-              Everdur bronze, with a 96% copper alloy, these 15" lead-free busts
-              sit atop a further 1" deep base of Blue Fantasy stone to give a
-              fitting finish to such an icon.
-            </p>
+            <AccordionDemo />
           </motion.div>
           <Image
             src="/images/filligram_munger.png"
